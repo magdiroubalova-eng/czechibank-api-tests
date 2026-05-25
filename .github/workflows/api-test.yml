@@ -22,6 +22,7 @@ jobs:
         run: npm install -g @usebruno/cli
 
       - name: Run Bruno collection and extract email
+        working-directory: collection
         run: |
           output=$(bru run --env Czechibank_Register 2>&1)
           echo "$output"
